@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Asap&family=Black+Han+Sans&family=Faster+One&family=Inter&family=Lexend+Deca:wght@600&family=Manrope&family=Nosifer&family=Orienta&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,900&family=Russo+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+body{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+#genel{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    border: 60px solid transparent;
+    border-image: url("https://neal.fun/auction-game/border-frame.png");
+    border-image-slice: 33.33%;
+    overflow: hidden;
+}
+
+.icerik .ust{
+    padding: 5px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ust img{
+    width: 100px;
+}
+
+.genel_h2{
+    font-size: 20px;
+    color: #000000;
+    transition: all .6s ease-in-out;
+}
+    
+.genel_h2 span{
+    font-size: 20px;
+    color: #b36cd2;
+    font-weight: bold;
+}
+
+.icerik{
+    width: 100%;
+    height: 100%;
+}
+
+.giris{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    margin-top: -80px; /* responsive */
+    transition: 2s; /* SİL */
+    /* display: none; */
+}
+
+.giris.silEkran{
+    display: none;
+}
+
+.giris h2{
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.giris a{
+    text-decoration: none;
+    color: #fff;
+    background-color: #000000;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.oyunEkrani{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 70px;
+    display: none;
+}
+
+.oyunEkrani.active{
+    display: flex;
+}
+
+.oyunEkrani .urunAdi{
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.oyunEkrani .resimler{
+    position: relative;
+}
+
+.resimler .fiyat{
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    height: 40px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.fiyat span{
+    font-size: 20px;
+    font-weight: 600;
+    color: #49b9f1;
+}
+
+.resimler .fiyat.active{
+    display: flex;
+}
+
+.oyunEkrani .resimler img{
+    width: 450px;
+    height: 370px;
+    object-fit: cover;
+}
+
+.urunAciklama{
+    font-size: 20px;
+    margin: 5px 0;
+    color: #574654;
+}
+
+.inputAlani{
+    display: flex;
+    align-items: center;
+    border: 2px solid #49b9f1;
+    margin-top: 10px;
+}
+
+input{
+    outline: none;
+    border: none;
+    padding: 10px 5px;
+    width: 180px;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.inputAlani button{
+    background-color: #49b9f1;
+    padding: 12px;
+}
+
+button{
+    border: none;
+    cursor: pointer;
+}
+
+button i{
+    font-size: 25px;
+    color: #fff;
+}
+
+button:hover i{
+    transform: rotate(35deg);
+}
+
+.iki{
+    display: none;
+}
+
+.iki.active{
+    display: flex;
+}
+
+.bir.active{
+    display: none;
+}
+
+.iki button{
+    background-color: #49b9f1;
+    padding: 12px;
+}
+
+@media(max-width: 900px){
+    html,body{
+        overflow-x: hidden;
+    }
+    #genel{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        border: 10px solid transparent;
+        border-image: url("https://neal.fun/auction-game/border-frame.png");
+        border-image-slice: 33.33%;
+        overflow: hidden;
+    }
+
+    .icerik{
+        width: 100%;
+    }
+
+    .giris{
+        width: 100%;
+        height: 100%;
+        margin-top: 0;
+        text-align: center;
+    }
+    .oyunEkrani{
+        width: 100%;
+        height: 100%;
+        margin-top: -40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .oyunEkrani .resimler{
+        width: 95%;
+    }
+    .oyunEkrani .resimler img{
+        width: 95%;
+        height: 370px;
+        object-fit: cover;
+    }
+    .resimler .fiyat{
+        position: absolute;
+        bottom: 10%;
+        width: 100%;
+        height: 40px;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+}
